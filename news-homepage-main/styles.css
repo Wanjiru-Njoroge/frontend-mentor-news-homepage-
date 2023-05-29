@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@400;700;800&family=Montserrat:wght@300&family=Outfit:wght@400;700&display=swap');
+:root{
+    --color-Soft-orange: hsl(35 77% 62%);
+    --color-Soft-red: hsl(5, 85%, 63%);
+    --color-Off-white: hsl(36, 100%, 99%);
+    --color-Grayish-blue: hsl(233, 8%, 79%);
+    --color-Dark-grayish-blue: hsl(236, 13%, 42%);
+    --color-Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body
+html{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items:center ;
+    justify-content:space-between ;
+    padding: 1.25rem;
+
+}
+.navbar nav #menu-close{
+    background: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1.25rem;
+    top: 1.25rem;
+    z-index: 100;
+    cursor: pointer;
+}
+.navbar .menu-button button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.navbar nav{
+    opacity: 0;
+    z-index: -9;
+    transition: all 0.3s ease-in-out;
+}
+.navbar nav.open{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 75vw;
+    background-color: white;
+    padding: 1.25rem;
+    opacity: 1;
+    z-index: 100;
+
+
+}
+.navbar nav ul{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.navbar nav ul li{
+    margin: 2rem 0;
+    font-size: 16px;
+    cursor: pointer;
+ 
+
+}
+.navbar nav ul li:hover{
+    color: var(--color-Soft-red) ;
+}
+
+
+ 
+.showcase{
+    padding: 1.25rem;
+    padding-top: 0;
+}
+
+.showcase h1{
+    font-size: 2rem;
+    font-weight: 800;
+    color:var(--color-Very-dark-blue) ;
+    margin:1rem 0;
+
+}
+.showcase p{
+    color: var(--color-Dark-grayish-blue);
+    margin-bottom: 1rem;
+}
+.showcase button{
+    background-color: var(--color-Soft-red);
+    color:white;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    letter-spacing: 0.2rem;
+
+}
+.showcase button:hover{
+   background-color: var(--color-Very-dark-blue);
+   cursor: pointer;
+}
+.right{
+    background-color: var(--color-Very-dark-blue);
+    margin-top: 2rem;
+    padding: 1.25rem 1.25rem 0;
+}
+.right  article{
+    padding: 1rem 0;
+}
+
+.right  article:not(:last-child){
+    border-bottom: 2px solid var(--color-Off-white);
+}
+.infor h2{
+    color: var(--color-Soft-orange);
+    
+}
+
+.infor h3{
+    color: white;
+    margin-bottom: 0.5rem;
+}
+.infor h3:hover{
+    color: var(--color-Soft-orange);
+    cursor: pointer;
+}
+p{
+    color: var(--color-Grayish-blue);
+}
+.cards{
+    padding: 1.25rem;
+    display: grid;
+    grid-template-columns:repeat(1, 1fr) ;
+    gap: 2.25rem;
+
+    
+}
+.cards article{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.cards article img{
+    width:150px;
+  
+}
+.cards article span{
+    color: var(--color-Grayish-blue);
+    font-weight:bold ;
+    font-size: 2rem;
+    opacity: 75%;
+}
+.cards article  h4{
+    font-size: 1.25rem;
+    color: var(--color-Very-dark-blue);
+    margin: 1rem 0;
+
+}
+.cards article p{
+    font-size: 1rem;
+}
+
+@media (min-width:1034px){
+    .navbar .menu-button button{
+        display: none;
+    }
+
+    .navbar nav{
+        opacity: 1;
+        z-index: auto;
+        width: 100%;
+    }
+    .navbar nav #menu-close{
+        display: none;
+    }
+
+    .navbar nav.open{
+        position: relative;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        z-index: auto;
+    }
+    .navbar nav ul{
+        position: relative;
+        top: 0;
+        transform: translateY(0%);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2.5rem;
+    }
+    .navbar nav ul li{
+        margin: 0;
+    }
+
+
+  .showcase{
+    display: flex;
+    gap: 1rem;
+   
+}
+.showcase > div:first-child article{
+    display: flex;
+    gap: 2rem;
+}
+
+.showcase article h1{
+    font-size:2.5rem ;
+}
+.showcase article p{
+    margin-top: 2rem;
+}
+.right{
+  margin: 0;
+  
+}
+.cards{
+    display: flex;
+    margin-top: 2rem;
+}
+
+
+}
